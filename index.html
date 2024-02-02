@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina SVG</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+</head>
+<body>
+    
+    <section class="blue">
+        <h1>Nice Curves NO SVG</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi magnam, repudiandae eaque facere dicta ex culpa qui ad maiores quae esse. Blanditiis modi magni soluta maxime odio nostrum, asperiores voluptate?</p>
+        <div class="curve"></div>
+    </section>
+    <section>
+        <h1>Nice Curves NO SVG</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi magnam, repudiandae eaque facere dicta ex culpa qui ad maiores quae esse. Blanditiis modi magni soluta maxime odio nostrum, asperiores voluptate?</p>
+        <div class="bubble"></div>
+    </section>
+    <section class="dark">
+        <h1>Nice Curves NO SVG</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi magnam, repudiandae eaque facere dicta ex culpa qui ad maiores quae esse. Blanditiis modi magni soluta maxime odio nostrum, asperiores voluptate?</p>
+    </section>
+    <section class="orange">
+        <h1>Nice Curves SI SVG SENCILLO</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi magnam, repudiandae eaque facere dicta ex culpa qui ad maiores quae esse. Blanditiis modi magni soluta maxime odio nostrum, asperiores voluptate?</p>
+        <div class="wave-1">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <div class="spacer svg-complex-1"></div>
+
+    <section>
+        <h1>Nice Curves SI SVG COMPLEX</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi magnam, repudiandae eaque facere dicta ex culpa qui ad maiores quae esse. Blanditiis modi magni soluta maxime odio nostrum, asperiores voluptate?</p>
+    </section>
+
+    <div class="spacer svg-complex-2 flip"></div>
+
+    <section class="pink">
+        <h1>Nice Curves</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi magnam, repudiandae eaque facere dicta ex culpa qui ad maiores quae esse. Blanditiis modi magni soluta maxime odio nostrum, asperiores voluptate?</p>
+
+        <!-- Para conseguir hacer una animación con los svg, se procede a insertar todo el codigo del primer blob, seguido de esto se elimina la etiqueta <rect></rect>, así mismo una vez que acabe el primer grupo, osea le etiqueta </g> se procede a agregar toda la etiqueta <g></g> del otro blob para que así sean 2 grupos juntos, una vez llegado a este paso en nuestra pagina se deben de ver las 2 formas juntas
+        Ahora se le debe agregar id a cada blob (la etiqueta <path> dentro de cada <g>) para poder animarlos
+        Una vez que se tenga esto, tomando en cuenta la complejidad para animarlos, se tiene una librería en la pagina KUTE.JS - Components - SVG Morph aqui se puede ver algunos ejemplos de lo que se puede hacer, la CDN se descarga desde la página principal
+         -->
+        <svg id="visual" viewBox="0 0 960 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        
+        <g transform="translate(458.4332539329865 154.84448788360882)">
+        <path id="blob1" d="M99.6 -83.4C126.3 -46 143.1 -4.8 137.1 35.2C131 75.1 102.2 113.7 65 129.5C27.8 145.4 -17.8 138.4 -48.9 117.4C-79.9 96.3 -96.5 61.1 -95.1 31.8C-93.7 2.6 -74.4 -20.6 -55.5 -56.2C-36.7 -91.7 -18.3 -139.6 9.1 -146.9C36.5 -154.1 73 -120.7 99.6 -83.4" fill="#BB004B"></path></g>
+        
+        <g transform="translate(441.87248099008275 130.20225476107046)" style="visibility: hidden;"><path id="blob2" d="M104 -65.3C134.4 -44.7 158.6 -1.5 149.4 32.1C140.1 65.7 97.4 89.6 55.8 105.6C14.3 121.6 -26 129.7 -46.6 113.4C-67.1 97.1 -67.8 56.4 -71 22.1C-74.1 -12.2 -79.7 -40.1 -68.2 -56.4C-56.8 -72.6 -28.4 -77.3 4.2 -80.6C36.7 -84 73.5 -85.9 104 -65.3" fill="#BB004B"></path></g>
+        </svg>
+    </section>
+
+<script src="code.js"></script>
+</body>
+</html>

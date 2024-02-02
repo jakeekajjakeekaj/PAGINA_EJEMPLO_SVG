@@ -1,0 +1,133 @@
+:root {
+  --background-color: #012;
+  --blue-color: #54f;
+  --orange-color: #b51;
+  --pink-color: #c09;
+  --dark-color: #222;
+}
+
+body {
+  background-color: var(--background-color);
+  color: #ccc;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+body, section, h1, p, div {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+section {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */  /* Este no nos sirve pra centrar, porque al cambiar la dirección a columna, se centraría pero a la vertical */
+  min-height: 400px;
+  padding: 100px 20vw;  /* Esto funciona como el vh, solo que en vez de medir la altura, mide el ancho */
+  z-index: 10;
+  width: 100%;
+}
+
+.blue {
+  background: var(--blue-color);
+}
+
+.orange {
+  background: var(--orange-color);
+}
+
+.pink {
+  background: var(--pink-color);
+}
+
+.dark {
+  background: var(--dark-color);
+}
+
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+  /* top: 0; */
+  /* z-index: -10; */
+}
+
+.curve::before {
+  content: '';
+  position: absolute;
+  right: -4%;
+  bottom: -75%;
+  border-radius: 50%;
+  width: 58%;
+  height: 100%;
+  background: var(--background-color);
+  /* z-index: 5; */
+  /* background: #000; */
+}
+.curve::after {
+  content: '';
+  position: absolute;
+  left: -4%;
+  bottom: -25%;
+  border-radius: 50%;
+  width: 58%;
+  height: 100%;
+  background: var(--blue-color);
+  /* background: #fff; */
+}
+
+.bubble {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.bubble::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  border-top-left-radius: 38% 100%;
+  border-top-right-radius: 38% 100%;
+  height: 87%;
+  width: 100%;
+  background: var(--dark-color);
+  /* z-index: -1; */
+}
+
+.wave-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* overflow: hidden; */
+  /* line-height: 0; */
+}
+
+.spacer {
+  /*aspect-ratio: 690/300;  /* El primer valor es el total y el segundo es lo que toma, como si fuera una fraccion invertida */
+  aspect-ratio: 5/1;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.svg-complex-1 {
+  background-image: url('svg/header-orange-1.svg');
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+/* .blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+} */
